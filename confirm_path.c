@@ -23,7 +23,7 @@ int confirm_path(char **arguments)
 	free(global_path);
 	while (exist_stat == -1 && dir_path != NULL)
 	{
-		command_path = sddon_command(dir_path, arguments[0]);
+		command_path = addon_command(dir_path, arguments[0]);
 		test_cph[i] = command_path;
 		exist_stat = exisst(test_cph[i]);
 		dir_path = strtok(NULL, ":");
