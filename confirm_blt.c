@@ -24,7 +24,7 @@ int confirm_blt(char **arguments, int exisst_stat)
 	if (_strcmp(builtins[i], "exit") == 0)
 	{
 		free(arguments[0]);
-		exit(exit_stat);
+		exit(exisst_stat);
 	}
 	if (_strcmp(builtins[i], "env") == 0)
 	{

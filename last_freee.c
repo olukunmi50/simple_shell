@@ -7,7 +7,7 @@ void last_freee(char *entry)
 {
 	if (isatty(STDIN_FILENO))
 	{
-		_putchar('\n');
+		putchar('\n');
 		free(entry);
 	}
 	if (!isatty(STDIN_FILENO))

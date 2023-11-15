@@ -13,7 +13,7 @@ int confirm_path(char **arguments)
 	char *test_cph[121];
 	int exist_stat = -1, i = 0;
 
-	global_path = _getenv("PATH");
+	global_path = _getenvv("PATH");
 	if (global_path == NULL)
 		return (-1);
 	global_dup = (_strdup(global_path));
@@ -23,9 +23,9 @@ int confirm_path(char **arguments)
 	free(global_path);
 	while (exist_stat == -1 && dir_path != NULL)
 	{
-		command_path = append_command(dir_path, arguments[0]);
+		command_path = sddon_command(dir_path, arguments[0]);
 		test_cph[i] = command_path;
-		exist_stat = exist(test_cph[i]);
+		exist_stat = exisst(test_cph[i]);
 		dir_path = strtok(NULL, ":");
 		i++;
 	}

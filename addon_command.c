@@ -25,7 +25,7 @@ char *addon_command(char *dir_path, char *command)
 	if (dir_path[z - 1] != '/')
 	{
 		command_path[z] = '/';
-		a++;
+		z++;
 	}
 	while (command[m] != '\0')
 	{
@@ -35,4 +35,3 @@ char *addon_command(char *dir_path, char *command)
 	command_path[z + m] = '\0';
 	return (command_path);
 }
-

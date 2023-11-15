@@ -13,7 +13,7 @@ int print_digits(int n)
 	if (n < 0)
 	{
 		number = -n;
-		i = i + _putchar('-');
+		i = i + putchar('-');
 	}
 	else
 	{
@@ -21,6 +21,6 @@ int print_digits(int n)
 	}
 	if (number / 10 != '\0')
 		i = i + print_digits(number / 10);
-	i = i + _putchar(number % 10 + '0');
+	i = i + putchar(number % 10 + '0');
 	return (i);
 }
